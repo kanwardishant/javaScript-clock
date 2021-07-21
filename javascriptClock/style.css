@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body  {
+    font-family: 'Encode Sans SC', sans-serif;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 300px   ;
+    grid-template-areas: 
+                         "w"
+                         "c"
+                         "t" ;
+                            
+                        
+}
+
+/* Weeks Section  */
+
+.ul-1 {
+    grid-area: w;
+    list-style: none;
+    display: flex;
+    
+    justify-content:center;
+    margin-top: 150px;
+    min-height: 40px;
+    font-size: 150%;
+    font-weight: bold;
+    color: rgb(110, 107, 107);
+}
+.yellow {
+    color: rgb(139, 5, 5);
+}
+ul>li {
+    margin-left: 10px;
+}
+
+/* Clock Section */
+
+.clock-div {
+    grid-area: c;
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1200%;
+    
+    
+}
+.clock {
+    display: flex;
+    color: rgb(139, 5, 5);
+    
+    justify-content: center;
+    
+}
+
+/* Button Section */
+
+.type-clock {
+    grid-area: t;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+
+}
+button {
+    margin-left: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: 150px;
+    font-size: 30px;
+}
+
+/* Responsive section */
+
+@media screen and ( max-width : 1080px) {
+
+    .clock-div {
+        font-size: 150px;
+        height: 180px;
+
+    }
+    .type-clock {
+       bottom: 100px; 
+    }
+    
+}
+
+@media  screen and (max-width: 840px) {
+    
+    .ul-1 {
+        flex-wrap: wrap;
+    }
+    .clock-div{
+        font-size: 100px;
+        height: 130px ;
+    }
+    .type-clock {
+        bottom: 140px; 
+     }
+}
+@media  screen and ( max-width : 600px) {
+
+    
+    .ul-1 li {
+        display: none;
+
+    }
+    .ul-1 .yellow {
+        display: block;
+    }
+
+    .clock-div {
+        font-size: 60px;
+    }
+    button {
+        width: 70px;
+        font-size: 15px;
+    }
+    .type-clock {
+        bottom: 180px;
+    }
+    
+}
